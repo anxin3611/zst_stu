@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.zst.spring'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+
+
+
+}
+compileJava.options.encoding('UTF-8')

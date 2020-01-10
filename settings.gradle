@@ -1,0 +1,7 @@
+rootProject.name = 'my-spring2'
+include 'domain'
+include 'manager'
+include 'repository'
+include 'utils'
+include 'service'
+

@@ -1,0 +1,9 @@
+# debug : false , 关闭SpringBoot的启动配置查询，true - 开启SpringBoot启动配置查询
+debug: false
+server:
+  port: 9090
+  servlet:
+    context-path: /zst
+logging:
+  config: classpath:log4j2.yml
+
