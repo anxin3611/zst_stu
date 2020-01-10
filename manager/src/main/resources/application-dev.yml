@@ -6,5 +6,13 @@ spring:
     password: zst0213@
   jpa:
     database: mysql
+    # 显示sql
     show-sql: true
+    # 解决 WARN: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed
+    open-in-view: false
+    hibernate:
+      # 开启驼峰的配置
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 

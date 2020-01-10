@@ -1,9 +1,12 @@
 package com.zst.spring.repository;
 
 
-import cn.my.spring.domain.CorporationDO;
+import com.zst.spring.domain.CorporationDO;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
+
+import java.io.Serializable;
 
 /**
  * @author ZST
@@ -12,5 +15,5 @@ import org.springframework.stereotype.Repository;
  * @description repository
  */
 @Repository
-public interface CorporationRepository extends JpaRepository<CorporationDO, Short> {
+public interface CorporationRepository extends JpaRepository<CorporationDO, Short>, JpaSpecificationExecutor<CorporationDO>, Serializable {
 }

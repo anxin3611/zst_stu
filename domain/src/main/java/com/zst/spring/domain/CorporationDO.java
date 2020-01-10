@@ -1,6 +1,9 @@
-package cn.my.spring.domain;
+package com.zst.spring.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +20,9 @@ import java.io.Serializable;
 @Entity
 @Table(name = "corporation")
 @Data
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class CorporationDO implements Serializable {
     @Id
     @Column(name = "corp_id")

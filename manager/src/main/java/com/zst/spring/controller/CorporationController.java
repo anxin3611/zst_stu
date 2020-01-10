@@ -1,6 +1,10 @@
 package com.zst.spring.controller;
 
+import com.zst.spring.service.CorporationService;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author ZST
@@ -10,4 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class CorporationController {
+
+    @Resource
+    private CorporationService corporationService;
+
+    @GetMapping("/test")
+    public String test() {
+        return corporationService.findAll().toString();
+    }
 }
