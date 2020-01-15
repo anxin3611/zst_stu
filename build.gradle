@@ -11,4 +11,3 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
 }
-compileJava.options.encoding('UTF-8')
