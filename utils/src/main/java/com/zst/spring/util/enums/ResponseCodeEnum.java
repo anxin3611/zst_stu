@@ -11,6 +11,7 @@ public enum ResponseCodeEnum {
      * 响应成功
      */
     SUCCESS(200, "success"),
+    ERROR_1001(1001, "s% 获取失败")
     ;
 
     public Integer code;

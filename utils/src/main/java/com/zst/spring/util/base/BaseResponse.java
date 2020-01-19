@@ -9,6 +9,7 @@ import lombok.*;
  * @date 2020/1/15 11:53
  * @description 基础响应类
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

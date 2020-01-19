@@ -2,6 +2,7 @@ package com.zst.spring.exception;
 
 import com.zst.spring.util.enums.ResponseCodeEnum;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @author ZST
@@ -9,6 +10,7 @@ import lombok.Data;
  * @date 2020/1/15 13:58
  * @description 异常处理类
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class ZstRuntimeException extends RuntimeException {
 

@@ -1,8 +1,11 @@
 package com.zst.spring.service;
 
 import com.zst.spring.domain.CorporationDO;
+import com.zst.spring.enums.IdentityEnums;
 import com.zst.spring.repository.CorporationRepository;
+import com.zst.spring.util.base.BaseResponse;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -15,17 +18,20 @@ import java.util.Optional;
  * @description
  */
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class CorporationService {
     @Resource
     private CorporationRepository corporationRepository;
+    @Resource
+    private IdentityService identityService;
 
     /**
      * 查询所有
      *
      * @return 所有实体的集合
      */
-    public List<CorporationDO> findAll() {
-        return corporationRepository.findAll();
+    public BaseResponse findAll() {
+        return BaseResponse.SUCCESS(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), corporationRepository.findAll());
     }
 
     /**

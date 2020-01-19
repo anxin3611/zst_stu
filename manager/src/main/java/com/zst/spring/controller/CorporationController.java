@@ -1,6 +1,5 @@
 package com.zst.spring.controller;
 
-import com.zst.spring.domain.CorporationDO;
 import com.zst.spring.service.CorporationService;
 import com.zst.spring.util.base.BaseResponse;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +21,6 @@ public class CorporationController {
 
     @GetMapping("/test")
     public BaseResponse test() {
-        return BaseResponse.SUCCESS("");
+        return corporationService.findAll();
     }
 }

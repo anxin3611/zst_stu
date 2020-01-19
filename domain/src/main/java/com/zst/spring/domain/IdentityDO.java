@@ -1,6 +1,8 @@
 package com.zst.spring.domain;
 
+import com.zst.spring.base.BaseDO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
@@ -10,10 +12,12 @@ import javax.persistence.*;
  * @date 2020/1/15 14:15
  * @description 序列号规则-DO
  */
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "identity")
 @Data
-public class IdentityDO {
+public class IdentityDO extends BaseDO {
+    private static final long serialVersionUID = -4204761469063437215L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
