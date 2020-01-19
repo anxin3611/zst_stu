@@ -26,7 +26,7 @@ public class CorporationServiceTest {
 
     @Test
     public void findAll() {
-        CorporationDO all = corporationService.findAll();
+        CorporationDO all = corporationService.findAll().get(0);
         assertNotNull(all);
     }
 
@@ -36,5 +36,35 @@ public class CorporationServiceTest {
         CorporationDO corporationDO = new CorporationDO((short) 1, "Acme Paper Corporation");
         List<CorporationDO> save = corporationService.save(corporationDO);
         assertNotNull(save);
+    }
+
+    @Test
+    public void testFindAll() {
+    }
+
+    @Test
+    public void findById() {
+        CorporationDO byId = getCorporationDO();
+        assertNotNull(byId);
+    }
+
+    private CorporationDO getCorporationDO() {
+        return corporationService.findById((short) 1);
+    }
+
+    @Test
+    public void testSave() {
+    }
+
+    @Test
+    public void deleteAll() {
+    }
+
+    @Test
+    public void update() {
+        CorporationDO corporationDO = getCorporationDO();
+        corporationDO.setName(null);
+        CorporationDO save = corporationService.update(corporationDO);
+
     }
 }
