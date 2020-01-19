@@ -13,23 +13,23 @@ import java.util.Iterator;
  * @version 1.0
  * @date 2020/1/19 13:14
  * @description 基础Repository 实现
+ *
+ * 需要将该类配置到启动类的 EnableJpaRepositories 注解中
  */
-public abstract class AbstractRepository<T, ID extends Serializable> extends SimpleJpaRepository<T, ID> implements BaseRepository<T, ID> {
+public class AbstractZstRepository<T, ID extends Serializable> extends SimpleJpaRepository<T, ID> implements BaseRepository<T, ID> {
 
     private EntityManager em;
     private static final int BATCH_SIZE = 2;
 
-    public AbstractRepository(JpaEntityInformation<T, ?> entityInformation, EntityManager em) {
+    public AbstractZstRepository(JpaEntityInformation<T, ?> entityInformation, EntityManager em) {
         super(entityInformation, em);
         this.em = em;
-
     }
 
-    public AbstractRepository(Class<T> domainClass, EntityManager em) {
+    public AbstractZstRepository(Class<T> domainClass, EntityManager em) {
         super(domainClass, em);
         this.em = em;
     }
-
 
     @Override
     @Transactional(rollbackOn = Exception.class)

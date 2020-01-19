@@ -1,6 +1,6 @@
 package com.zst.spring.exception;
 
-import com.zst.spring.util.base.BaseResponse;
+import com.zst.spring.base.BaseResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 

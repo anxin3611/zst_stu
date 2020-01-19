@@ -1,4 +1,4 @@
-package com.zst.spring.util.enums;
+package com.zst.spring.enums;
 
 /**
  * @author Item233
@@ -11,7 +11,8 @@ public enum ResponseCodeEnum {
      * 响应成功
      */
     SUCCESS(200, "success"),
-    ERROR_1001(1001, "s% 获取失败")
+    ERROR_1001(1001, "s% 获取失败"),
+    ERROR_2001(2001, "s% 保存失败"),
     ;
 
     public Integer code;

@@ -3,7 +3,7 @@ package com.zst.spring.service;
 import com.zst.spring.domain.CorporationDO;
 import com.zst.spring.enums.IdentityEnums;
 import com.zst.spring.repository.CorporationRepository;
-import com.zst.spring.util.base.BaseResponse;
+import com.zst.spring.base.BaseResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,7 +30,7 @@ public class CorporationService {
      *
      * @return 所有实体的集合
      */
-    public BaseResponse findAll() {
+    public BaseResponse<List<CorporationDO>> findAll() {
         return BaseResponse.SUCCESS(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), corporationRepository.findAll());
     }
 

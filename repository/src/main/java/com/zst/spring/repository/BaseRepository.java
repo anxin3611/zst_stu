@@ -2,6 +2,7 @@ package com.zst.spring.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.io.Serializable;
@@ -11,7 +12,10 @@ import java.io.Serializable;
  * @version 1.0
  * @date 2020/1/19 13:07
  * @description 基础Repository
+ *
+ * 需要添加 NoRepositoryBean 注解，以标注该类
  */
+@NoRepositoryBean
 public interface BaseRepository<T, ID> extends JpaRepository<T, ID>, JpaSpecificationExecutor<T>, PagingAndSortingRepository<T, ID>, Serializable {
     /**
      * 批量插入

@@ -6,7 +6,7 @@ import com.zst.spring.domain.IdentityDO;
 import com.zst.spring.enums.IdentityEnums;
 import com.zst.spring.exception.ZstRuntimeException;
 import com.zst.spring.repository.IdentityRepository;
-import com.zst.spring.util.enums.ResponseCodeEnum;
+import com.zst.spring.enums.ResponseCodeEnum;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 

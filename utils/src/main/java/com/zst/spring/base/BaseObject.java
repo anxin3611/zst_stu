@@ -1,4 +1,4 @@
-package com.zst.spring.util.base;
+package com.zst.spring.base;
 
 import java.io.Serializable;
 

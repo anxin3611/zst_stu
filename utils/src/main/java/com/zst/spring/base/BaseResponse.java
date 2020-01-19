@@ -1,6 +1,6 @@
-package com.zst.spring.util.base;
+package com.zst.spring.base;
 
-import com.zst.spring.util.enums.ResponseCodeEnum;
+import com.zst.spring.enums.ResponseCodeEnum;
 import lombok.*;
 
 /**

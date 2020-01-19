@@ -3,6 +3,8 @@ package com.zst.spring.domain;
 import com.zst.spring.base.BaseDO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -27,10 +29,14 @@ public class UserDO extends BaseDO {
     private String password;
     private String salt;
     @Column(name = "create_time")
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Column(name = "create_id")
     private long createId;
     @Column(name = "update_time")
+    @UpdateTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
     @Column(name = "update_id")
     private long updateId;

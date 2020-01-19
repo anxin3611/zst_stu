@@ -1,6 +1,6 @@
 package com.zst.spring.exception;
 
-import com.zst.spring.util.enums.ResponseCodeEnum;
+import com.zst.spring.enums.ResponseCodeEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
