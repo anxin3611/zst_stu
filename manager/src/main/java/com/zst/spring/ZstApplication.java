@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/10 15:32
  * @description

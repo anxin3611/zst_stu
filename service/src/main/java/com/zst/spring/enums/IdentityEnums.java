@@ -1,7 +1,7 @@
 package com.zst.spring.enums;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/16 11:43
  * @description 序列号相关枚举值

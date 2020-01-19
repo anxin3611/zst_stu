@@ -2,25 +2,24 @@ package com.zst.spring.repository;
 
 
 import com.zst.spring.domain.IdentityDO;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import java.io.Serializable;
+import java.util.Optional;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/15 14:38
- * @description repository
+ * @description repository，序列号生成相关
  */
 @Repository
-public interface IdentityRepository extends JpaRepository<IdentityDO, Integer>, JpaSpecificationExecutor<IdentityDO>, Serializable {
+public interface IdentityRepository extends BaseRepository<IdentityDO, Integer> {
     /**
-     * 根据别名获取序列号生成规则
+     * 根据别名获取序列号规则
      *
-     * @param alias
-     * @return
+     * @param alias 别名
+     * @return java.util.Optional<com.zst.spring.domain.IdentityDO>
      */
-    IdentityDO findByAlias(String alias);
+    Optional<IdentityDO> findByAlias(String alias);
+
 }

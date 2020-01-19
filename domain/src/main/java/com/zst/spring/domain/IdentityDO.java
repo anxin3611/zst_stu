@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/15 14:15
  * @description 序列号规则-DO

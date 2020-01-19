@@ -2,3 +2,8 @@
 /.gradle/
 /out/
 /out/production/classes/
+/.idea/
+/*/build/
+/*/out/
+/log/
+/*/log/
