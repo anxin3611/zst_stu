@@ -1,9 +1,7 @@
 package com.zst.spring.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import com.zst.spring.base.BaseDO;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,13 +15,14 @@ import java.io.Serializable;
  * @date 2020/1/10 14:23
  * @description DO - 与数据库一一对应的实体
  */
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "corporation")
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class CorporationDO implements Serializable {
+public class CorporationDO extends BaseDO {
+    private static final long serialVersionUID = 568187596679037147L;
     @Id
     @Column(name = "corp_id")
     private Short corpId;

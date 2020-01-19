@@ -36,7 +36,8 @@ public class FastJsonConfiguration extends WebMvcConfigurationSupport {
         // fasttJson消息转换配置
         FastJsonConfig fastJsonConfig = new FastJsonConfig();
         // 设置转换的格式
-        /*WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null
+        /*
+        WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null
         WriteNullStringAsEmpty ： 字符类型字段如果为null,输出为"",而非null
         DisableCircularReferenceDetect ：消除对同一对象循环引用的问题，默认为false（如果不配置有可能会进入死循环）
         WriteNullBooleanAsFalse：Boolean字段如果为null,输出为false,而非null

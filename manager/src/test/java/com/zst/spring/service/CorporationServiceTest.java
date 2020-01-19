@@ -26,7 +26,8 @@ public class CorporationServiceTest {
 
     @Test
     public void findAll() {
-        CorporationDO all = corporationService.findAll().get(0);
+        List<CorporationDO> all = (List<CorporationDO>) corporationService.findAll().getData();
+        System.out.println(all.get(0).toString());
         assertNotNull(all);
     }
 

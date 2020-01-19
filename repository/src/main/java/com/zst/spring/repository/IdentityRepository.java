@@ -16,4 +16,11 @@ import java.io.Serializable;
  */
 @Repository
 public interface IdentityRepository extends JpaRepository<IdentityDO, Integer>, JpaSpecificationExecutor<IdentityDO>, Serializable {
+    /**
+     * 根据别名获取序列号生成规则
+     *
+     * @param alias
+     * @return
+     */
+    IdentityDO findByAlias(String alias);
 }

@@ -15,6 +15,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.16.10'
     // fastjson
     compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
+    // hutool java工具包
+    compile group: 'cn.hutool', name: 'hutool-all', version: '5.1.1'
+    // commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+
 }
 
 apply plugin: 'maven-publish'

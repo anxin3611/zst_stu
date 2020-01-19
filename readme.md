@@ -1,5 +1,5 @@
 **************
-本项目是SQL学习指南这本书的学习项目-SpringBoot项目
+本项目是SQL学习指南这本书的学习项目-SpringBoot项目，且为SpringBoot - Spring - Spring-data-jpa 框架
 --------------
 
 ![SQL学习指南](./pics/SQL学习指南.png)
