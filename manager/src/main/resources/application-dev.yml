@@ -4,7 +4,6 @@ spring:
 #    url: jdbc:mysql://127.0.0.1:3306/sql_stu?serverTimezone=GMT%2b8
 #    username: root
 #    password: zst0213@
-
     # 德鲁伊配置开始
     name: druidDataSource
     type: com.alibaba.druid.pool.DruidDataSource
@@ -37,7 +36,7 @@ spring:
   jpa:
     database: mysql
     # 显示sql
-    show-sql: true
+    show-sql: false
     # 解决 WARN: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed
     open-in-view: false
     hibernate:
