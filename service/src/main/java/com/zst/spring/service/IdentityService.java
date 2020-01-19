@@ -12,9 +12,10 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.Optional;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/16 11:39
  * @description 序列号生成
@@ -33,10 +34,11 @@ public class IdentityService {
     public String serialNum(IdentityEnums.AliasEnums aliasEnum) {
         // 默认UUID
         StringBuilder result = new StringBuilder().append(IdUtil.randomUUID());
-        IdentityDO byAlias = identityRepository.findByAlias(aliasEnum.alias);
-        if (byAlias == null) {
+        Optional<IdentityDO> aliasOpt = identityRepository.findByAlias(aliasEnum.alias);
+        if (!aliasOpt.isPresent()) {
             throw new ZstRuntimeException(ResponseCodeEnum.ERROR_1001, null, "规则不存在，serialNum");
         }
+        IdentityDO byAlias = aliasOpt.get();
         // 生成类型是每日生成
         if (IdentityEnums.GetTypeEnums.UUID.code == byAlias.getType()) {
             String rule = byAlias.getRule();
