@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import java.util.List;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/15 10:34
  * @description fastJson 配置

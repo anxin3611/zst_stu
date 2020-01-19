@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/15 13:58
  * @description 异常处理类

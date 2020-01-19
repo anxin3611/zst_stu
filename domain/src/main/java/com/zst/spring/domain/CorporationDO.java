@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/10 14:23
  * @description DO - 与数据库一一对应的实体

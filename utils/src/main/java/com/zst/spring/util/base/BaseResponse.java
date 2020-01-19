@@ -4,7 +4,7 @@ import com.zst.spring.util.enums.ResponseCodeEnum;
 import lombok.*;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/15 11:53
  * @description 基础响应类

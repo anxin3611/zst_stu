@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author ZST
+ * @author Item233
  * @version 1.0
  * @date 2020/1/13 17:43
  * @description 德鲁伊数据源配置, ip:port/context-path/druid/login.html
