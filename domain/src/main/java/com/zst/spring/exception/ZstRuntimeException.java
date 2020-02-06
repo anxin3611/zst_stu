@@ -19,7 +19,7 @@ public class ZstRuntimeException extends RuntimeException {
     private Integer code;
     private String message;
 
-    public ZstRuntimeException(ResponseCodeEnum codeEnum, String serialNum, Object... params) {
+    public ZstRuntimeException(String serialNum, ResponseCodeEnum codeEnum, Object... params) {
         this.serialNum = serialNum;
         this.code = codeEnum.code;
         if (params == null){

@@ -1,8 +1,7 @@
 package com.zst.spring.domain;
 
 import com.zst.spring.base.BaseDO;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -19,12 +18,15 @@ import java.util.Date;
 @Entity
 @Table(name = "user")
 @Data
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class UserDO extends BaseDO {
     private static final long serialVersionUID = 8347107355226154207L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private long userId;
+    @NonNull
     private String username;
     private String password;
     private String salt;

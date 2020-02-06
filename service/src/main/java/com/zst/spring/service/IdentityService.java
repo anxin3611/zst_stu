@@ -36,7 +36,7 @@ public class IdentityService {
         StringBuilder result = new StringBuilder().append(IdUtil.randomUUID());
         Optional<IdentityDO> aliasOpt = identityRepository.findByAlias(aliasEnum.alias);
         if (!aliasOpt.isPresent()) {
-            throw new ZstRuntimeException(ResponseCodeEnum.ERROR_1001, null, "规则不存在，serialNum");
+            throw new ZstRuntimeException(null, ResponseCodeEnum.ERROR_1001, "规则不存在，serialNum");
         }
         IdentityDO byAlias = aliasOpt.get();
         // 生成类型是每日生成

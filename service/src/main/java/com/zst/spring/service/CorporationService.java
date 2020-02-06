@@ -1,7 +1,7 @@
 package com.zst.spring.service;
 
+import com.zst.spring.base.BaseService;
 import com.zst.spring.domain.CorporationDO;
-import com.zst.spring.enums.IdentityEnums;
 import com.zst.spring.repository.CorporationRepository;
 import com.zst.spring.base.BaseResponse;
 import org.springframework.stereotype.Service;
@@ -19,11 +19,9 @@ import java.util.Optional;
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class CorporationService {
+public class CorporationService extends BaseService {
     @Resource
     private CorporationRepository corporationRepository;
-    @Resource
-    private IdentityService identityService;
 
     /**
      * 查询所有
@@ -31,7 +29,7 @@ public class CorporationService {
      * @return 所有实体的集合
      */
     public BaseResponse<List<CorporationDO>> findAll() {
-        return BaseResponse.SUCCESS(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), corporationRepository.findAll());
+        return BaseResponse.SUCCESS(handleSerialNum(), corporationRepository.findAll());
     }
 
     /**

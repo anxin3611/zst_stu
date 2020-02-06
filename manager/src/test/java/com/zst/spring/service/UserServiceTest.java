@@ -36,4 +36,8 @@ public class UserServiceTest {
         UserDO data = save.getData();
         System.out.println(data.toString());
     }
+    @Test
+    public void check() {
+
+    }
 }
