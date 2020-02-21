@@ -28,7 +28,6 @@ public class BaseResponse<T> extends BaseObject {
     public static BaseResponse SUCCESS(String serialNum) {
         return new BaseResponse(serialNum, DEFAULT_RESPONSE_ENUM.code, DEFAULT_RESPONSE_ENUM.msg);
     }
-
     public static <T> BaseResponse<T> SUCCESS(String serialNum, T data) {
         return new BaseResponse(serialNum, DEFAULT_RESPONSE_ENUM.code, DEFAULT_RESPONSE_ENUM.msg, data);
     }
@@ -36,7 +35,6 @@ public class BaseResponse<T> extends BaseObject {
     public static BaseResponse ERROR(String serialNum, ResponseCodeEnum responseCode) {
         return new BaseResponse(serialNum, responseCode.code, responseCode.msg);
     }
-
     public static BaseResponse ERROR(String serialNum, Integer code, String msg) {
         return new BaseResponse(serialNum, code, msg);
     }
