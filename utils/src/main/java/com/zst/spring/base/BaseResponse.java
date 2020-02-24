@@ -17,25 +17,39 @@ import lombok.*;
 public class BaseResponse<T> extends BaseObject {
     private static final long serialVersionUID = 8978959524864295796L;
     private static ResponseCodeEnum DEFAULT_RESPONSE_ENUM = ResponseCodeEnum.SUCCESS;
+    /**
+     * 序列号
+     */
     @NonNull
-    private String serialNum;
+    protected String serialNum;
+    /**
+     * 响应状态码
+     */
     @NonNull
-    private Integer code;
+    protected Integer code;
+    /**
+     * 响应消息
+     */
     @NonNull
-    private String msg;
-    private T data;
+    protected String msg;
+    /**
+     * 响应数据
+     */
+    protected T data;
 
-    public static BaseResponse SUCCESS(String serialNum) {
+    public static BaseResponse sucess(String serialNum) {
         return new BaseResponse(serialNum, DEFAULT_RESPONSE_ENUM.code, DEFAULT_RESPONSE_ENUM.msg);
     }
-    public static <T> BaseResponse<T> SUCCESS(String serialNum, T data) {
+
+    public static <T> BaseResponse<T> sucess(String serialNum, T data) {
         return new BaseResponse(serialNum, DEFAULT_RESPONSE_ENUM.code, DEFAULT_RESPONSE_ENUM.msg, data);
     }
 
-    public static BaseResponse ERROR(String serialNum, ResponseCodeEnum responseCode) {
+    public static BaseResponse error(String serialNum, ResponseCodeEnum responseCode) {
         return new BaseResponse(serialNum, responseCode.code, responseCode.msg);
     }
-    public static BaseResponse ERROR(String serialNum, Integer code, String msg) {
+
+    public static BaseResponse error(String serialNum, Integer code, String msg) {
         return new BaseResponse(serialNum, code, msg);
     }
 

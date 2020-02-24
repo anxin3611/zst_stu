@@ -44,7 +44,7 @@ public class UserService extends BaseService {
             handleEx(e);
             throw new ZstRuntimeException(serialNum, ResponseCodeEnum.ERROR_2001, "user ", userDO.getUsername());
         }
-        return BaseResponse.SUCCESS(serialNum, save);
+        return BaseResponse.sucess(serialNum, save);
     }
 
     /**
@@ -81,7 +81,7 @@ public class UserService extends BaseService {
         if (!password.equals(SecurityUtils.generatePassword(userDO.getPassword(), salt))) {
             throw new ZstRuntimeException(serialNum, ResponseCodeEnum.ERROR_4001);
         }
-        return BaseResponse.SUCCESS(serialNum, userStore);
+        return BaseResponse.sucess(serialNum, userStore);
     }
 
 }

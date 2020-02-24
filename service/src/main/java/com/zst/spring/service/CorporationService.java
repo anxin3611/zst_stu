@@ -15,7 +15,7 @@ import java.util.Optional;
  * @author Item233
  * @version 1.0
  * @date 2020/1/10 15:28
- * @description
+ * @description corporation service 企业
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -29,7 +29,7 @@ public class CorporationService extends BaseService {
      * @return 所有实体的集合
      */
     public BaseResponse<List<CorporationDO>> findAll() {
-        return BaseResponse.SUCCESS(handleSerialNum(), corporationRepository.findAll());
+        return BaseResponse.sucess(handleSerialNum(), corporationRepository.findAll());
     }
 
     /**
