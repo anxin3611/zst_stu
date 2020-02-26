@@ -38,13 +38,13 @@ public class CorporationService extends BaseService {
      * @param id id
      * @return 查询后的实体对象
      */
-    public CorporationDO findById(Short id) {
+    public BaseResponse<CorporationDO> findById(Short id) {
         CorporationDO corporationDO = null;
         Optional<CorporationDO> byId = corporationRepository.findById(id);
         if (byId.isPresent()) {
             corporationDO = byId.get();
         }
-        return corporationDO;
+        return BaseResponse.sucess(handleSerialNum(), corporationDO);
     }
 
     /**

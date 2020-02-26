@@ -17,6 +17,6 @@ public class ZstExceptionAdvice {
 
     @ExceptionHandler(ZstRuntimeException.class)
     public BaseResponse handleZstException(ZstRuntimeException e) {
-        return BaseResponse.ERROR(e.getSerialNum(), e.getCode(), e.getMessage());
+        return BaseResponse.error(e.getSerialNum(), e.getCode(), e.getMessage());
     }
 }

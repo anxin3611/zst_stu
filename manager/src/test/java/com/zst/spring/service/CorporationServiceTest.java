@@ -50,7 +50,7 @@ public class CorporationServiceTest {
     }
 
     private CorporationDO getCorporationDO() {
-        return corporationService.findById((short) 1);
+        return corporationService.findById((short) 1).getData();
     }
 
     @Test

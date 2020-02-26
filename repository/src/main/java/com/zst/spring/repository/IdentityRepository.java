@@ -20,6 +20,6 @@ public interface IdentityRepository extends BaseRepository<IdentityDO, Integer> 
      * @param alias 别名
      * @return java.util.Optional<com.zst.spring.domain.IdentityDO>
      */
-    Optional<IdentityDO> findByAlias(String alias);
+    IdentityDO findByAlias(String alias);
 
 }

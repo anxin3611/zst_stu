@@ -28,7 +28,7 @@ public abstract class BaseService {
      * @return java.lang.String
      */
     protected String handleSerialNum() {
-        String serialNum = null;
+        String serialNum;
         try {
             serialNum = identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM);
         } catch (Exception e) {
