@@ -30,6 +30,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * knife4j: http://${host}:${port}/doc.html
  *
  * No mapping for GET /swagger-ui.html，这个异常的出现其实就是因为他按照原来的路径已经找不到了
+ *
+ * swagger文档的json数据地址：http://[ip]:[port]/v2/api-docs，导出后可导入yapi
  */
 @Configuration
 @EnableSwagger2
