@@ -2,8 +2,10 @@ package com.zst.spring.service;
 
 import com.zst.spring.base.BaseService;
 import com.zst.spring.domain.CorporationDO;
+import com.zst.spring.mapstruct.CorporationConvert;
 import com.zst.spring.repository.CorporationRepository;
 import com.zst.spring.base.BaseResponse;
+import com.zst.spring.vo.CorporationResponseVO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,13 +25,16 @@ public class CorporationService extends BaseService {
     @Resource
     private CorporationRepository corporationRepository;
 
+    @Resource
+    private CorporationConvert corporationConvert;
+
     /**
      * 查询所有
      *
      * @return 所有实体的集合
      */
-    public BaseResponse<List<CorporationDO>> findAll() {
-        return BaseResponse.sucess(handleSerialNum(), corporationRepository.findAll());
+    public BaseResponse<List<CorporationResponseVO>> findAll() {
+        return BaseResponse.sucess(handleSerialNum(), corporationConvert.convert(corporationRepository.findAll()));
     }
 
     /**
@@ -38,13 +43,13 @@ public class CorporationService extends BaseService {
      * @param id id
      * @return 查询后的实体对象
      */
-    public BaseResponse<CorporationDO> findById(Short id) {
+    public BaseResponse<CorporationResponseVO> findById(Short id) {
         CorporationDO corporationDO = null;
         Optional<CorporationDO> byId = corporationRepository.findById(id);
         if (byId.isPresent()) {
             corporationDO = byId.get();
         }
-        return BaseResponse.sucess(handleSerialNum(), corporationDO);
+        return BaseResponse.sucess(handleSerialNum(), corporationConvert.convert(corporationDO));
     }
 
     /**

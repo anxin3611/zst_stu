@@ -51,8 +51,7 @@ public class IdentityService {
                 // 多线程访问
                 long id = Thread.currentThread().getId();
                 int i = Long.hashCode(id);
-                int no = IdUtil.simpleUUID().hashCode();
-                result = new StringBuilder(dateValue).append(i).append("-").append(no);
+                result = new StringBuilder(dateValue).append(i);
                 log.info(result.toString());
             }
         }

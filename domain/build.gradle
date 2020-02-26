@@ -17,4 +17,13 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.16.10'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
     compile project(':utils')
+    // swagger 相关
+    /*compile "io.springfox:springfox-swagger2:2.9.2"
+    compile 'io.springfox:springfox-swagger-ui:2.9.2'*/
+    // https://mvnrepository.com/artifact/com.spring4all/swagger-spring-boot-starter
+    compile group: 'com.spring4all', name: 'swagger-spring-boot-starter', version: '1.9.1.RELEASE'
+    // https://mvnrepository.com/artifact/com.github.xiaoymin/swagger-bootstrap-ui
+//    compile group: 'com.github.xiaoymin', name: 'swagger-bootstrap-ui', version: '1.9.6'
+    // https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-spring-boot-starter
+    compile group: 'com.github.xiaoymin', name: 'knife4j-spring-boot-starter', version: '2.0.1'
 }

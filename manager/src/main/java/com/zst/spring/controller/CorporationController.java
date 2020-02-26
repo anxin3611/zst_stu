@@ -3,6 +3,7 @@ package com.zst.spring.controller;
 import com.zst.spring.base.BaseResponse;
 import com.zst.spring.domain.CorporationDO;
 import com.zst.spring.service.CorporationService;
+import com.zst.spring.vo.CorporationResponseVO;
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,14 +37,14 @@ public class CorporationController {
     @GetMapping("/list")
     @ApiOperation(value = "合作企业列表", notes = "获取合作企业列表")
     @ApiResponses(value = {@ApiResponse(code = 405, message = "Invalid input", response = Integer.class)})
-    public BaseResponse<List<CorporationDO>> list() {
+    public BaseResponse<List<CorporationResponseVO>> list() {
         return corporationService.findAll();
     }
 
     @GetMapping("/detail")
     @ApiOperation(value = "获取企业详情", notes = "根据id获取企业详情")
     @ApiImplicitParam(name = "id", value = "企业ID", dataType = "short", paramType = "query")
-    public BaseResponse detail(Short id) {
+    public BaseResponse<CorporationResponseVO> detail(Short id) {
         return corporationService.findById(id);
     }
 }
