@@ -1,4 +1,4 @@
-package com.zst.spring.vo;
+package com.zst.spring.vo.response;
 
 import com.zst.spring.base.BaseObject;
 import io.swagger.annotations.ApiModel;
@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ApiModel(description = "企业信息响应")
-public class CorporationResponseVO extends BaseObject {
+public class CorporationResponse extends BaseObject {
     private static final long serialVersionUID = -175352292111458284L;
     @ApiModelProperty(value = "企业ID")
     private Short corpId;

@@ -1,7 +1,7 @@
 package com.zst.spring.mapstruct;
 
 import com.zst.spring.domain.CorporationDO;
-import com.zst.spring.vo.CorporationResponseVO;
+import com.zst.spring.vo.response.CorporationResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -28,7 +28,7 @@ public interface CorporationConvert {
      * @date 2020/2/26 13:23
      */
     @Mapping(target = "corpName", source = "name")
-    CorporationResponseVO convert(CorporationDO corporationDO);
+    CorporationResponse convert(CorporationDO corporationDO);
 
-    List<CorporationResponseVO> convert(List<CorporationDO> corporationDO);
+    List<CorporationResponse> convert(List<CorporationDO> corporationDO);
 }

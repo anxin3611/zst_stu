@@ -1,11 +1,18 @@
 package com.zst.spring.service;
 
+import com.zst.spring.base.BasePageResponse;
 import com.zst.spring.base.BaseService;
+import com.zst.spring.base.BasePageRequest;
 import com.zst.spring.domain.CorporationDO;
 import com.zst.spring.mapstruct.CorporationConvert;
 import com.zst.spring.repository.CorporationRepository;
 import com.zst.spring.base.BaseResponse;
-import com.zst.spring.vo.CorporationResponseVO;
+import com.zst.spring.vo.request.CorpListRequest;
+import com.zst.spring.vo.response.CorporationResponse;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -33,8 +40,18 @@ public class CorporationService extends BaseService {
      *
      * @return 所有实体的集合
      */
-    public BaseResponse<List<CorporationResponseVO>> findAll() {
-        return BaseResponse.sucess(handleSerialNum(), corporationConvert.convert(corporationRepository.findAll()));
+    public BaseResponse<List<CorporationResponse>> findAll(BasePageRequest<CorpListRequest> request) {
+        CorpListRequest bean = request.getBean();
+        if (StringUtils.isBlank(request.getSerialNum())) {
+            request.setSerialNum(handleSerialNum());
+        }
+        Integer currentPage = request.getCurrentPage();
+        Integer pageSize = request.getPageSize();
+        Sort corpId = Sort.by(Sort.Direction.DESC, "corpId");
+        PageRequest pageRequest = PageRequest.of(request.getCurrentPage() - 1, pageSize, corpId);
+        Page<CorporationDO> all = corporationRepository.findAll(pageRequest);
+        List<CorporationDO> content = all.getContent();
+        return new BasePageResponse<List<CorporationResponse>, CorpListRequest>().response(corporationConvert.convert(content), request, all.getTotalElements(), content.size());
     }
 
     /**
@@ -43,7 +60,7 @@ public class CorporationService extends BaseService {
      * @param id id
      * @return 查询后的实体对象
      */
-    public BaseResponse<CorporationResponseVO> findById(Short id) {
+    public BaseResponse<CorporationResponse> findById(Short id) {
         CorporationDO corporationDO = null;
         Optional<CorporationDO> byId = corporationRepository.findById(id);
         if (byId.isPresent()) {

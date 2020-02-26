@@ -52,7 +52,7 @@ public class IdentityService {
                 long id = Thread.currentThread().getId();
                 int i = Long.hashCode(id);
                 result = new StringBuilder(dateValue).append(i);
-                log.info(result.toString());
+                log.info("{} : {}", aliasEnum.alias, result.toString());
             }
         }
         return result.toString();

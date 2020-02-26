@@ -12,8 +12,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-public class PageRequest<T> extends BaseRequest<T> {
+public class BasePageRequest<T> extends BaseRequest<T> {
     private static final long serialVersionUID = 1668006370102018034L;
     private Integer currentPage;
-    private Integer pageSize;
+    private Integer pageSize = 10;
 }

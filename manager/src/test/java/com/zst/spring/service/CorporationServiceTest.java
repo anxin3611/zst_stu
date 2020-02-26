@@ -1,7 +1,7 @@
 package com.zst.spring.service;
 
 import com.zst.spring.domain.CorporationDO;
-import com.zst.spring.vo.CorporationResponseVO;
+import com.zst.spring.vo.response.CorporationResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,9 +27,9 @@ public class CorporationServiceTest {
 
     @Test
     public void findAll() {
-        List<CorporationDO> all = (List<CorporationDO>) corporationService.findAll().getData();
+        /*List<CorporationDO> all = (List<CorporationDO>) corporationService.findAll().getData();
         System.out.println(all.get(0).toString());
-        assertNotNull(all);
+        assertNotNull(all);*/
     }
 
     @Test
@@ -46,11 +46,11 @@ public class CorporationServiceTest {
 
     @Test
     public void findById() {
-        CorporationResponseVO byId = getCorporationDO();
+        CorporationResponse byId = getCorporationDO();
         assertNotNull(byId);
     }
 
-    private CorporationResponseVO getCorporationDO() {
+    private CorporationResponse getCorporationDO() {
         return corporationService.findById((short) 1).getData();
     }
 
@@ -64,7 +64,7 @@ public class CorporationServiceTest {
 
     @Test
     public void update() {
-        CorporationResponseVO corporationDO = getCorporationDO();
+        CorporationResponse corporationDO = getCorporationDO();
         corporationDO.setCorpName(null);
 //        CorporationDO save = corporationService.update(corporationDO);
 
