@@ -3,10 +3,8 @@ package com.zst.spring.service;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.zst.spring.ZstApplication;
 import com.zst.spring.enums.IdentityEnums;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.util.concurrent.ExecutorService;
@@ -21,7 +19,6 @@ import java.util.concurrent.TimeUnit;
  * @description
  */
 @SpringBootTest(classes = ZstApplication.class)
-@RunWith(SpringRunner.class)
 public class IdentityServiceTest {
     @Resource
     private IdentityService identityService;

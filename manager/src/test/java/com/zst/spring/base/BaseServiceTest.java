@@ -1,9 +1,8 @@
 package com.zst.spring.base;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.zst.spring.service.CorporationService;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
@@ -14,13 +13,13 @@ import javax.annotation.Resource;
  * @description
  */
 @SpringBootTest
-@RunWith(SpringRunner.class)
 public class BaseServiceTest {
     @Resource
-    private BaseService baseService;
+    private CorporationService baseService;
 
     @Test
     public void handleSerialNum() {
         String serialNum = baseService.handleSerialNum();
+        System.out.println(serialNum);
     }
 }

@@ -2,16 +2,12 @@ package com.zst.spring.service;
 
 import com.zst.spring.domain.CorporationDO;
 import com.zst.spring.vo.response.CorporationResponse;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Item233
@@ -20,7 +16,6 @@ import static org.junit.Assert.*;
  * @description
  */
 @SpringBootTest
-@RunWith(SpringRunner.class)
 public class CorporationServiceTest {
     @Resource
     private CorporationService corporationService;
@@ -37,7 +32,6 @@ public class CorporationServiceTest {
         corporationService.deleteAll();
         CorporationDO corporationDO = new CorporationDO((short) 1, "Acme Paper Corporation");
         List<CorporationDO> save = corporationService.save(corporationDO);
-        assertNotNull(save);
     }
 
     @Test
@@ -47,7 +41,6 @@ public class CorporationServiceTest {
     @Test
     public void findById() {
         CorporationResponse byId = getCorporationDO();
-        assertNotNull(byId);
     }
 
     private CorporationResponse getCorporationDO() {

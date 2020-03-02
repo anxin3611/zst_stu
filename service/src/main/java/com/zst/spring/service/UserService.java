@@ -29,6 +29,10 @@ public class UserService extends BaseService {
     @Resource
     private UserRepository userRepository;
 
+    public void test1() {
+        return;
+    }
+
     /**
      * 保存账户
      *

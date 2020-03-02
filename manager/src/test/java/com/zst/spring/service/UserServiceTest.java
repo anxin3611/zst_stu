@@ -3,10 +3,8 @@ package com.zst.spring.service;
 import com.zst.spring.base.BaseResponse;
 import com.zst.spring.domain.UserDO;
 import com.zst.spring.util.SecurityUtils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
@@ -17,7 +15,6 @@ import javax.annotation.Resource;
  * @description
  */
 @SpringBootTest
-@RunWith(SpringRunner.class)
 public class UserServiceTest {
     @Resource
     private UserService userService;
@@ -39,5 +36,9 @@ public class UserServiceTest {
     @Test
     public void check() {
 
+    }
+
+    @Test
+    void test1() {
     }
 }
