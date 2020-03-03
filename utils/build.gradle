@@ -10,9 +10,9 @@ sourceCompatibility = 1.8
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // compileOnly 只编译时有效，不参与打包，代替老版本的privided
-    compileOnly 'org.projectlombok:lombok:1.16.10'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
     // annotationProcessor管理注解处理器，并将其添加到处理器类路径中
-    annotationProcessor 'org.projectlombok:lombok:1.16.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
     // fastjson
     compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
     // hutool java工具包

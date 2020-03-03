@@ -31,7 +31,6 @@ import java.util.Optional;
 public class CorporationService extends BaseService {
     @Resource
     private CorporationRepository corporationRepository;
-
     @Resource
     private CorporationConvert corporationConvert;
 

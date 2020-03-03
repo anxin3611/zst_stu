@@ -11,7 +11,9 @@ dependencies {
     compile project(':repository')
     compile project(':utils')
     // compileOnly 只编译时有效，不参与打包，代替老版本的privided
-    compileOnly 'org.projectlombok:lombok:1.16.10'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
     // annotationProcessor管理注解处理器，并将其添加到处理器类路径中
-    annotationProcessor 'org.projectlombok:lombok:1.16.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    // springboot redis starter
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.2.5.RELEASE'
 }

@@ -21,7 +21,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.zst.spring.repository", repositoryBaseClass = AbstractZstRepository.class)
 public class ZstApplication {
     public static void main(String[] args) {
-        log.info("加载配置......");
         SpringApplication.run(ZstApplication.class, args);
     }
 }

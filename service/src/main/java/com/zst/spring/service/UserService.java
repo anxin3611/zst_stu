@@ -9,7 +9,9 @@ import com.zst.spring.enums.ResponseCodeEnum;
 import com.zst.spring.util.SecurityUtils;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,10 +30,8 @@ import java.util.Optional;
 public class UserService extends BaseService {
     @Resource
     private UserRepository userRepository;
-
-    public void test1() {
-        return;
-    }
+    @Resource
+    private RedisTemplate<String, Object> redisTemplate;
 
     /**
      * 保存账户

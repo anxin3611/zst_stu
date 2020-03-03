@@ -32,6 +32,11 @@ dependencies {
     // 德鲁伊数据源依赖, 为解决sql不监控的问题，将依赖换成 druid-spring-boot-starter
     //  implementation group: 'com.alibaba', name: 'druid', version: '1.1.21'
     implementation group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.1.21'
+
+    // jwt
+    implementation 'com.auth0:java-jwt:3.10.0'
+
+
 }
 
 compileJava.options.encoding('UTF-8')
