@@ -9,7 +9,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -28,6 +28,7 @@ public class FastJsonConfiguration extends WebMvcConfigurationSupport {
 
     /**
      * 消息转换器配置
+     *
      * @param converters 转换器集合
      */
     @Override
@@ -38,32 +39,16 @@ public class FastJsonConfiguration extends WebMvcConfigurationSupport {
         FastJsonHttpMessageConverter fastJsonHttpMessageConverter = new FastJsonHttpMessageConverter();
 
         //升级最新版本需加，解决 FastJson报错'Content-Type' cannot contain wildcard type '*'
-        List<MediaType> supportedMediaTypes = new ArrayList<>();
-        supportedMediaTypes.add(MediaType.APPLICATION_JSON);
-        supportedMediaTypes.add(MediaType.APPLICATION_ATOM_XML);
-        supportedMediaTypes.add(MediaType.APPLICATION_FORM_URLENCODED);
-        supportedMediaTypes.add(MediaType.APPLICATION_OCTET_STREAM);
-        supportedMediaTypes.add(MediaType.APPLICATION_PDF);
-        supportedMediaTypes.add(MediaType.APPLICATION_RSS_XML);
-        supportedMediaTypes.add(MediaType.APPLICATION_XHTML_XML);
-        supportedMediaTypes.add(MediaType.APPLICATION_XML);
-        supportedMediaTypes.add(MediaType.IMAGE_GIF);
-        supportedMediaTypes.add(MediaType.IMAGE_JPEG);
-        supportedMediaTypes.add(MediaType.IMAGE_PNG);
-        supportedMediaTypes.add(MediaType.TEXT_EVENT_STREAM);
-        supportedMediaTypes.add(MediaType.TEXT_HTML);
-        supportedMediaTypes.add(MediaType.TEXT_MARKDOWN);
-        supportedMediaTypes.add(MediaType.TEXT_PLAIN);
-        supportedMediaTypes.add(MediaType.TEXT_XML);
+        List<MediaType> supportedMediaTypes = Arrays.asList(MediaType.APPLICATION_JSON, MediaType.APPLICATION_ATOM_XML, MediaType.APPLICATION_FORM_URLENCODED
+                , MediaType.APPLICATION_OCTET_STREAM, MediaType.APPLICATION_RSS_XML, MediaType.APPLICATION_XHTML_XML, MediaType.APPLICATION_XML, MediaType.IMAGE_GIF
+                , MediaType.IMAGE_JPEG, MediaType.IMAGE_PNG, MediaType.TEXT_EVENT_STREAM, MediaType.TEXT_HTML, MediaType.TEXT_MARKDOWN, MediaType.TEXT_PLAIN, MediaType.TEXT_XML);
         fastJsonHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
 
         // fasttJson消息转换配置
         FastJsonConfig fastJsonConfig = new FastJsonConfig();
 
-
         // 设置转换的格式
-        /*
-        WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null
+        /* WriteNullListAsEmpty  ：List字段如果为null,输出为[],而非null
         WriteNullStringAsEmpty ： 字符类型字段如果为null,输出为"",而非null
         DisableCircularReferenceDetect ：消除对同一对象循环引用的问题，默认为false（如果不配置有可能会进入死循环）
         WriteNullBooleanAsFalse：Boolean字段如果为null,输出为false,而非null
@@ -76,7 +61,7 @@ public class FastJsonConfiguration extends WebMvcConfigurationSupport {
 
     /**
      * 发现如果继承了WebMvcConfigurationSupport，则在yml中配置的相关内容会失效。 需要重新指定静态资源
-     *
+     * <p>
      * No mapping for GET /swagger-ui.html，这个异常的出现其实就是因为他按照原来的路径已经找不到了
      *
      * @param registry
