@@ -14,7 +14,6 @@ public class AuthConfig {
     public static final ThreadLocal<String> TOKEN = new ThreadLocal<>();
 
     public static String sign() {
-
         return null;
     }
 

@@ -6,6 +6,8 @@ import com.zst.spring.service.CorporationService;
 import com.zst.spring.vo.request.CorpListRequest;
 import com.zst.spring.vo.response.CorporationResponse;
 import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -35,6 +37,10 @@ public class CorporationController {
 
     @Resource
     private CorporationService corporationService;
+    @Autowired
+    private CorporationService corporationService1;
+    @Qualifier
+    private CorporationService corporationService2;
 
     @PostMapping("/list")
     @ApiOperation(value = "合作企业列表", notes = "获取合作企业列表")
