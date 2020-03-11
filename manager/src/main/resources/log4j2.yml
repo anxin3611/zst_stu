@@ -11,7 +11,7 @@ Configuration:
       - name: log.level.console
         value: info
       - name: log.path
-        value: log
+        value: E:\myCode\log\my_spring2
       - name: project.name
         value: opendoc
       - name: log.pattern
