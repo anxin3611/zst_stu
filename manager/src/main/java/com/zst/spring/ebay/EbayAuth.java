@@ -31,6 +31,9 @@ public class EbayAuth implements ApplicationRunner {
 
     public void loadCredential() {
         try {
+
+
+
             CredentialUtil.load(new FileInputStream(ResourceUtils.getFile("classpath:ebay-config.yml")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
