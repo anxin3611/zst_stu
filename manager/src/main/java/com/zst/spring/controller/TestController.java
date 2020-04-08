@@ -36,9 +36,6 @@ public class TestController {
 
     @GetMapping("/ex")
     public BaseResponse testEx() {
-
-
-
         return BaseResponse.error(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), ResponseCodeEnum.ERROR_1000);
     }
 
