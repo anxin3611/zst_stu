@@ -20,7 +20,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableSpringConfigured
 @EnableJpaRepositories(basePackages = "com.zst.spring.repository", repositoryBaseClass = AbstractZstRepository.class)
 public class ZstApplication {
+
     public static void main(String[] args) {
+//        System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(ZstApplication.class, args);
     }
 }

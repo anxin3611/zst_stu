@@ -2,6 +2,7 @@ package com.zst.spring.controller;
 
 import com.zst.spring.base.BaseResponse;
 import com.zst.spring.enums.IdentityEnums;
+import com.zst.spring.enums.ResponseCodeEnum;
 import com.zst.spring.service.IdentityService;
 import com.zst.spring.vo.request.TestVO;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +32,11 @@ public class TestController {
     @GetMapping("/test1")
     public BaseResponse<String> test1(TestVO vo) {
         return BaseResponse.sucess(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), vo.getCurrentUser());
+    }
+
+    @GetMapping("/ex")
+    public BaseResponse testEx() {
+        return BaseResponse.error(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), ResponseCodeEnum.ERROR_1000);
     }
 
     @PostMapping("/testFile")

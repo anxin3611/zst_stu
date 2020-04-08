@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AddFixedPriceItemRequest xmlns="urn:ebay:apis:eBLBaseComponents">
+    <ErrorLanguage>en_US</ErrorLanguage>
+    <RequesterCredentials>
+        <eBayAuthToken>AgAAAA**AQAAAA**aAAAAA**G5dzXg**nY+sHZ2PrBmdj6wVnY+sEZ2PrA2dj6wFk4aiCpeBqQSdj6x9nY+seQ**di8FAA**AAMAAA**32bTJ8MdHyyXA7dwWB3tqCWOuUvcRwqxnHp0BJ4frbqaZfqgAkq6gPTEgKunjoaB6auO994qG60fLuzLuXsVSHUs1THq/yt9egbwpiOPhWc3/s2ux55SG1/+py9Y3zml0oZDki7v1urbWr+2ZnF/sGKURTXjS2sPZmXep2K0XKbEOe0ddrGa9ETcw0JJIxDSA7fjiBliTEhj3jac6EiZJB0JkY99Yi3HrwHGV7lzAx4fDxnQ/9e2u6w49Shx79TJnO2PAA7bq9SDZ2obkExLPQZYTteL2tzb3+WcQgmtim5uREcMW24obGsF3yZxrlotW1TFXvw/2SJz8UfPIGyyskb69c0O+i94zmmE51q//NaGpbynwz8zozR1aeJsp26Ynr/P8I0WVp+ZgVVNa5fXQfLHWP8PlPySPq292c6zNNyigx4zXZGwxBPuKKWNjVExobygyOEmm9LE8pG0zORUkYRb3J8AdhVrz/SJrCtWzgt7Zq/comVb8xvdbyNW9mAEau1ujlElHi1Q3fwY4Gn/wiDWULdYPkXbz4PnISiCIe0cl/Q1q22ElZWtpqsm62WpaQdVSwpo4wA5MAHSJjAJvldlsyhcQBPXs3CzFS6lkPu2gpubPr9qAaHgDzGDhy9fIooQMApuVw/PZiVM6X5Q63+ZFEXYFCxgeI0NQoJ/FS2ChJpvmW0eyGc/F2ZPJIvhaOQ9Rx8uaQ2W255PFdGeOWQGmxHkBttJH6MybXCn6Vv+lqjCKLjrLy9ysXIcEJTb</eBayAuthToken>
+    </RequesterCredentials>
+    <WarningLevel>High</WarningLevel>
+    <Item>
+        <Country>US</Country>
+        <Currency>USD</Currency>
+        <Description>This is a test item.</Description>
+        <ListingDuration>Days_3</ListingDuration>
+        <ListingType>FixedPriceItem</ListingType>
+        <Location>San Jose, CA</Location>
+        <PaymentMethods>PayPal</PaymentMethods>
+        <PayPalEmailAddress>me@ebay.com</PayPalEmailAddress>
+        <PrimaryCategory>
+            <CategoryID>14111</CategoryID>
+        </PrimaryCategory>
+        <Quantity>1</Quantity>
+        <ShippingDetails>
+            <ApplyShippingDiscount>true</ApplyShippingDiscount>
+            <PaymentInstructions>eBay test instruction.</PaymentInstructions>
+            <SalesTax>
+                <SalesTaxPercent>0.0825</SalesTaxPercent>
+                <SalesTaxState>CA</SalesTaxState>
+            </SalesTax>
+            <ShippingServiceOptions>
+                <ShippingService>USPSExpressMail</ShippingService>
+                <ShippingServiceCost>1.0</ShippingServiceCost>
+                <ShippingServiceAdditionalCost>1.0</ShippingServiceAdditionalCost>
+                <ShippingServicePriority>1</ShippingServicePriority>
+            </ShippingServiceOptions>
+            <ShippingType>Flat</ShippingType>
+        </ShippingDetails>
+        <Site>US</Site>
+        <StartPrice>1.01</StartPrice>
+        <Title>Test. DO NOT BID</Title>
+        <BestOfferDetails>
+            <BestOfferEnabled>false</BestOfferEnabled>
+        </BestOfferDetails>
+        <SKU>1122334455-01</SKU>
+        <DispatchTimeMax>1</DispatchTimeMax>
+        <ReturnPolicy>
+            <ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>
+        </ReturnPolicy>
+    </Item>
+</AddFixedPriceItemRequest>

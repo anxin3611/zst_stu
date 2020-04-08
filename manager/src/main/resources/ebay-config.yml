@@ -1,0 +1,29 @@
+name: ebay-config
+
+# Trading API OAuth - https://developer.ebay.com/api-docs/static/oauth-tokens.html
+
+# UPDATE the values in this file, before running the tests
+#api.sandbox.ebay.com:
+#  appid: jianli-thisisli-SBX-c69ec6b8e-18115ce9
+#  certid: SBX-69ec6b8e490c-0756-42ca-922b-4750
+#  devid: ab1132f7-a732-464b-8677-04025943aa25
+#  redirecturi: jian_li-jianli-thisisli-khphh
+
+# jian_li-jianli-thisisli-ygngrb
+api.sandbox.ebay.com:
+  appid: jianli-thisisli-SBX-c69ec6b8e-18115ce9
+  certid: SBX-69ec6b8e490c-0756-42ca-922b-4750
+  devid: ab1132f7-a732-464b-8677-04025943aa25
+  redirecturi: jian_li-jianli-thisisli-ygngrb
+
+#api.sandbox.ebay.com:
+#  appid: 2b370593-9f00-47f8-b2f4-ee18c4da54b1
+#  certid: ac5d2da3-f80c-4664-bb4f-57659b6b76fd
+#  devid: 86437196-043e-4b7d-9735-ab75932fab54
+#  redirecturi: -2b370593-9f00-4-sgcer
+
+api.ebay.com:
+  appid: jianli-thisisli-PRD-d69ee5442-65d53b87
+  certid: PRD-69ee5442ad48-5869-4ec0-b087-3ada
+  devid: ab1132f7-a732-464b-8677-04025943aa25
+  redirecturi: jian_li-jianli-thisisli-khphh

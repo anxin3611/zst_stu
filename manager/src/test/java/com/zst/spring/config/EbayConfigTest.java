@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  * @description ：
  */
 @SpringBootTest
-class AuthConfigTest {
+class EbayConfigTest {
 
     @Resource
     private AuthConfig authConfig;

@@ -16,4 +16,5 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
     // springboot redis starter
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.2.5.RELEASE'
+    implementation 'com.ebay.auth:ebay-oauth-java-client:1.1.2'
 }
