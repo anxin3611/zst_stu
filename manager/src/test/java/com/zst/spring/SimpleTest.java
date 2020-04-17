@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Base64;
 import java.util.Date;
 
 /**
@@ -63,9 +64,14 @@ public class SimpleTest {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
         Date parse = simpleDateFormat.parse(datetime);
 
-
         System.out.println(new Date());
         System.out.println(parse);
     }
 
+    @Test
+    public void base64Test() {
+        final byte[] encode = Base64.getEncoder().encode("wangshuaitong".getBytes());
+        final String s = new String(encode);
+        System.out.println(s);
+    }
 }

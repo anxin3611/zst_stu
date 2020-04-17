@@ -16,7 +16,7 @@ class RsaUtilTest {
     @Test
     void testInitKey() {
         try {
-            RsaUtil.plantWide(SignEnum.DSA);
+            RsaUtil.plantWide(SignEnum.RSA);
         } catch (Exception e) {
             e.printStackTrace();
         }
