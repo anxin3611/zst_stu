@@ -45,6 +45,11 @@ dependencies {
         exclude group: 'ch.qos.logback', module: 'logback-classic'
 //        ch.qos.logback:logback-classic:1.0.1
     }
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore
+    implementation group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.13'
+// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.12'
+
 }
 
 compileJava.options.encoding('UTF-8')
