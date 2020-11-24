@@ -31,7 +31,7 @@ public class CorporationService {
      * @return 所有实体的集合
      */
     public BaseResponse findAll() {
-        return BaseResponse.SUCCESS(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), corporationRepository.findAll());
+        return BaseResponse.success(identityService.serialNum(IdentityEnums.AliasEnums.SERIAL_NUM), corporationRepository.findAll());
     }
 
     /**
