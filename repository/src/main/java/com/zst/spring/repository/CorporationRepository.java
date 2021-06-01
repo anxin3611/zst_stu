@@ -2,7 +2,7 @@ package com.zst.spring.repository;
 
 
 import com.zst.spring.domain.CorporationDO;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
 /**
  * @author Item233
@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
  * @date 2020/1/10 15:13
  * @description repository
  */
-@Repository
-public interface CorporationRepository extends BaseRepository<CorporationDO, Short> {
+//@Repository
+public interface CorporationRepository extends CrudRepository<CorporationDO, Short> {
 }

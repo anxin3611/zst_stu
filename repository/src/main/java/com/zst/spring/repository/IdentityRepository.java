@@ -2,6 +2,7 @@ package com.zst.spring.repository;
 
 
 import com.zst.spring.domain.IdentityDO;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -12,8 +13,8 @@ import java.util.Optional;
  * @date 2020/1/15 14:38
  * @description repository，序列号生成相关
  */
-@Repository
-public interface IdentityRepository extends BaseRepository<IdentityDO, Integer> {
+//@Repository
+public interface IdentityRepository extends CrudRepository<IdentityDO, Integer> {
     /**
      * 根据别名获取序列号规则
      *

@@ -7,7 +7,6 @@ import com.zst.spring.util.base.BaseResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,9 +19,9 @@ import java.util.Optional;
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class CorporationService {
-    @Resource
+//    @Resource
     private CorporationRepository corporationRepository;
-    @Resource
+//    @Resource
     private IdentityService identityService;
 
     /**
@@ -57,7 +56,7 @@ public class CorporationService {
      */
     public List<CorporationDO> save(CorporationDO corporationDO) {
         CorporationDO save = corporationRepository.save(corporationDO);
-        return corporationRepository.findAll();
+        return null;
     }
 
     /**
