@@ -9,7 +9,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/sql_stu?serverTimezone=GMT%2b8
+      url: jdbc:mysql://192.168.2.65:53306/zst?serverTimezone=GMT%2b8
       username: root
       password: zst0213@
       # 配置监控统计拦截的filters，表示可以使用监控过滤器，去掉后监控界面将无法统计，'wall'用于防火墙
@@ -50,4 +50,30 @@ spring:
         #format_sql: true
         # 指出是什么操作生成了该语句
         #use_sql_comments: true
-
+  redis:
+    host: 192.168.2.65
+    password: zst0213@
+    lettuce:
+      pool:
+        #连接池最大连接数，使用负数表示没有限制，默认为8
+        max-active: 8
+        #连接池最大阻塞等待时间，使用负数表示没有限制，默认为-1
+        max-wait: -1
+        #连接池最大空闲链接数，默认为8
+        max-idle: 8
+        #连接池最小空闲链接数，默认为0
+        min-idle: 0
+  elasticsearch:
+    rest:
+      uris: ["192.168.2.65:9200"]
+      username: elastic
+      password: zst0213@
+# 日志级别，如果与日志配置文件冲突，以日志配置文件为准
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          # CONDITIONS EVALUATION REPORT 日志不打印
+          autoconfigure:
+            logging: info
