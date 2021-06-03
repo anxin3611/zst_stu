@@ -1,5 +1,5 @@
 # debug : false , 关闭SpringBoot的启动配置查询，true - 开启SpringBoot启动配置查询
-debug: false
+debug: true
 server:
   port: 9090
   servlet:

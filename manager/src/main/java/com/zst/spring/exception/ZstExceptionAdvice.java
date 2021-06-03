@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  * @version 1.0
  * @date 2020/1/15 13:51
  * @description
- * @ControllerAdvice  拦截异常并统一处理
- * @RestControllerAdvice 拦截异常并统一处理
+ * 注解ControllerAdvice  拦截异常并统一处理
+ * 注解RestControllerAdvice 拦截异常并统一处理
  */
 @ControllerAdvice
 public class ZstExceptionAdvice {
 
     @ExceptionHandler(ZstRuntimeException.class)
-    public BaseResponse handleZstException(ZstRuntimeException e) {
+    public BaseResponse<Void> handleZstException(ZstRuntimeException e) {
         return BaseResponse.error(e.getSerialNum(), e.getCode(), e.getMessage());
     }
 }
