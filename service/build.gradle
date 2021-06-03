@@ -5,8 +5,23 @@ plugins {
 group 'com.zst.spring'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 dependencies {
     compile project(':repository')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.2.0.RELEASE'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-pool2
+    compile group: 'org.apache.commons', name: 'commons-pool2', version: '2.9.0'
+    // compileOnly 只编译时有效，不参与打包，代替老版本的 privided
+    compileOnly 'org.projectlombok:lombok:1.16.10'
+    // annotationProcessor管理注解处理器，并将其添加到处理器类路径中
+    annotationProcessor 'org.projectlombok:lombok:1.16.10'
+    // log4j2->yml
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.10.1'
+    // log4j2
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-log4j2', version: '2.2.0.RELEASE'
+    // 德鲁伊数据源依赖, 为解决sql不监控的问题，将依赖换成 druid-spring-boot-starter
+    //  compile group: 'com.alibaba', name: 'druid', version: '1.1.21'
+    compile group: 'com.alibaba', name: 'druid-spring-boot-starter', version: '1.1.21'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.2.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.2.0.RELEASE'
 }
